@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hello = (TextView) findViewById(R.id.hello_text);
+        FirebaseAuth.getInstance().signOut();
         hello.setText("You have been sign out");
         db = FirebaseFirestore.getInstance();
     }
